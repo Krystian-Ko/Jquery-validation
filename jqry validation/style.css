@@ -7,6 +7,10 @@
 	height: -moz-fit-content;
 	height: fit-content;
 }
+.error {
+	color: red;
+	padding-left: 1em;
+}
 .contact {
 	padding-top: 1em;
 	background-color: rgba(0, 0, 0, 0.9);
@@ -54,6 +58,7 @@
 #emailPreferences {
 	padding: 1em;
 }
+
 .contact__form .submit-btn {
 	padding: 0.625em 6.25em;
 	border-radius: 0.938em;
@@ -63,7 +68,9 @@
 	margin-top: 1.25em;
 	margin-bottom: 1.25em;
 	margin-left: 1em;
+	cursor: pointer;
 }
+
 .section-heading {
 	position: relative;
 	margin: 1em 0.5em 1em 0;
