@@ -50,6 +50,9 @@ $(document).ready(function () {
 			if (element.attr('name') == 'policy') {
 				error.insertAfter(element.next('span'));
 			}
+			else {
+				error.insertAfter(element);
+			}
 		},
 		submitHandler: function (form) {
 			alert('Formularz wysłany!');
