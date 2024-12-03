@@ -9,9 +9,22 @@ $(document).ready(function () {
 
 	$('#contactForm').validate({
 		rules: {
+			firstname: {
+				required: true,
+			},
+			surname: {
+				required: true,
+			},
+
 			username: {
 				required: true,
 				minlength: 3,
+			},
+			mail: {
+				required: true,
+			},
+			phone: {
+				required: true,
 			},
 			password: {
 				required: true,
@@ -27,9 +40,21 @@ $(document).ready(function () {
 			},
 		},
 		messages: {
+			firstname: {
+				required: 'Proszę podać imię',
+			},
+			surname: {
+				required: 'Proszę podać nazwisko',
+			},
 			username: {
 				required: 'Proszę podać nazwę użytkownika',
 				minlength: 'Nazwa użytkownika musi mieć co najmniej 3 znaki',
+			},
+			mail: {
+				required: 'Proszę podać e-mail',
+			},
+			phone: {
+				required: 'Proszę podać telefon',
 			},
 			password: {
 				required: 'Proszę podać hasło',
