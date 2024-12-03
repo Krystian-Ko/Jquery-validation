@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="PL">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<script src="scrippt.js"></script>
+	</head>
+	<body>
+		<section class="contact" id="technical-support">
+			<h2 class="section-heading">Walidacja jQuery</h2>
+			<div class="section-padding">
+				<form class="contact__form" id="contactForm">
+					<input
+						type="text"
+						class="contact__form-element"
+						placeholder="Imię"
+						required
+					/>
+					<input
+						type="text"
+						class="contact__form-element"
+						placeholder="Nazwisko"
+						required
+					/>
+					<input
+						type="text"
+						class="contact__form-element"
+						placeholder="Nazwa użytkownika"
+						name="username"
+						required
+					/>
+					<input
+						type="email"
+						class="contact__form-element"
+						placeholder="E-mail"
+						required
+					/>
+					<input
+						type="tel"
+						class="contact__form-element"
+						placeholder="Telefon"
+						required
+					/>
+					<input
+						type="password"
+						class="contact__form-element"
+						placeholder="Hasło"
+						name="password"
+						required
+					/>
+					<input
+						type="password"
+						class="contact__form-element"
+						placeholder="Powtórz hasło"
+						name="confirm_password"
+						required
+					/>
+
+					<input
+						type="checkbox"
+						class="contact__form-check"
+						name="policy"
+					/><span>Proszę zaakceptować naszą politykę.</span><br />
+
+					<input
+						type="checkbox"
+						class="contact__form-check"
+						id="receiveEmails"
+					/>Chciałbym otrzymywać reklamy.(opcjonalne)<br />
+					<fieldset id="emailPreferences" style="display: none">
+						<legend>Otrzymywane reklamy</legend>
+						<input type="checkbox" id="adsNewsletter" /> Otrzymywanie
+						newslettera<br />
+						<input type="checkbox" id="adsSpecialOffers" /> Otrzymywanie
+						specjalnych ofert<br />
+						<input type="checkbox" id="adsEvents" /> Otrzymywanie informacji o
+						wydarzeniach<br />
+					</fieldset>
+					<input type="submit" class="submit-btn" value="Wyslij" />
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
