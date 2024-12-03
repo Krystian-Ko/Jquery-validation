@@ -49,8 +49,6 @@ $(document).ready(function () {
 		errorPlacement: function (error, element) {
 			if (element.attr('name') == 'policy') {
 				error.insertAfter(element.next('span'));
-			} else {
-				error.insertAfter(element);
 			}
 		},
 		submitHandler: function (form) {
