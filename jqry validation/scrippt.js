@@ -22,6 +22,9 @@ $(document).ready(function () {
 				required: true,
 				equalTo: "[name='password']",
 			},
+			policy: {
+				required: true,
+			},
 		},
 		messages: {
 			username: {
@@ -37,20 +40,29 @@ $(document).ready(function () {
 				required: 'Proszę powtórzyć hasło',
 				equalTo: 'Hasła muszą się zgadzać',
 			},
+			policy: {
+				required: 'To pole jest wymagane',
+			},
 		},
 		errorElement: 'div',
 		errorClass: 'error',
+		errorPlacement: function (error, element) {
+			if (element.attr('name') == 'policy') {
+				error.insertAfter(element.next('span'));
+			} else {
+				error.insertAfter(element);
+			}
+		},
 		submitHandler: function (form) {
 			alert('Formularz wysłany!');
 			form.submit();
 		},
 	});
 
-	// Dodajemy niestandardową metodę walidacji dla hasła
 	$.validator.addMethod(
 		'passwordCheck',
 		function (value, element) {
-			return this.optional(element) || /\d/.test(value); // Sprawdzamy, czy hasło zawiera co najmniej jedną cyfrę
+			return /\d/.test(value);
 		},
 		'Hasło musi zawierać co najmniej jedną cyfrę'
 	);
